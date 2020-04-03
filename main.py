@@ -22,7 +22,7 @@ def hello_world():
         inputFeatures = [fever, pain, age, runnyNose, diffBreath]
         infProb = clf.predict_proba([inputFeatures])[0][1]
         print(infProb)
-        return render_template('show.html', inf = round(infProb*100))
+        return render_template('templates/show.html', inf = round(infProb*100))
     return render_template('index.html')
 
 
